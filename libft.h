@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: luimarti <luimarti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: luimarti <luimarti@student.42.us.org>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 13:56:01 by luimarti          #+#    #+#             */
-/*   Updated: 2020/02/27 14:39:44 by luimarti         ###   ########.fr       */
+/*   Updated: 2020/03/09 13:47:25 by luimarti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define LIBFT_H
 
 # include <string.h>
+# include <limits.h>
+
+# define BUFF_SIZE 32
 
 typedef	struct		s_list
 {
@@ -88,5 +91,7 @@ int					ft_is_lower(char c);
 int					ft_is_whitespace(char c);
 void				ft_swap_int(int *a, int *b);
 int					**ft_malloc_matrix(unsigned int a, unsigned int b);
+
+int					get_next_line(const int fd, char **line);
 
 #endif
